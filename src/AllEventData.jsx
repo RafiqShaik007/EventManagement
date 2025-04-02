@@ -7,25 +7,37 @@ import { Link } from "react-router-dom";
 const Events = () => {
   let [data, setData] = useState([]);
 
+  let [reload, setReload] = useState(true)
+
   useEffect(() => {
     axios
       .get("http://localhost:8080/api/event/AllEventData")
       .then((res) => {
         // console.log(res.data)
         setData(res.data.data);
+        
       })
       .catch(() => {
         console.log("Some ERROR in fetching in Home Component");
       });
-  }, [data]);
+  }, [reload]);
 
-  let remove = (s) => {
-    console.log("Delete Function is Working", s);
+  let remove = (object_id) => {
+    console.log("Delete Function is Working", object_id );
 
-    // axios.delete(`http://localhost:5000/employees/${s}`)
-    // .then((res)=>{
-    //     console.log(res.data)
-    // })
+    
+
+    axios.delete(`http://localhost:8080/api/event/deleteEvent/${object_id}`)
+    .then((res)=>{
+        console.log(res.data)
+        if(res.data.status === true){
+            alert(res.data.message)
+            setReload(reload=== true ? false: true)
+        }
+        else{
+            alert(res.data.message)
+        }
+    })
   };
 
   return (
