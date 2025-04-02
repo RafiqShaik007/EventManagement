@@ -13,6 +13,7 @@ import ChatBox from "./ChatBox";
 import Home from "./Home";
 import Login from "./Login";
 import AddEvent from "./AddEvent";
+import Events from "./AllEventData";
 
 const App = () => {
   return (
@@ -44,9 +45,9 @@ const App = () => {
           <Route element={<ProtectRoutes />}>
             <Route path="/home/" element={<Quotes />} />
             <Route path="/home/addEvent" element={<AddEvent/>} />
-            <Route path="/home/messages" element={<Messages />}>
-              <Route path="/home/messages/" element={<ChatBox />} />
-              <Route path="/home/messages/:name" element={<ChatBox />} />
+            <Route path="/home/allEvents" element={<Events/>}>
+              {/* <Route path="/home/messages/" element={<ChatBox />} />
+              <Route path="/home/messages/:name" element={<ChatBox />} /> */}
             </Route>
           </Route>
 

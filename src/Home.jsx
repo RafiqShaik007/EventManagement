@@ -20,7 +20,7 @@ const Home = ()=>{
                 <div><Link to='/home/'>CODIFY</Link></div>
                 <div>
                     <Link to="/home/addEvent">ADD EVENT</Link>
-                    {/* <Link to="/home/messages">MESSAGES</Link> */}
+                    <Link to="/home/allEvents">DISPLAY ALL EVENTS</Link>
                     {/* <Link to="/register" onClick={()=>{document.cookie = 'cond=false'}}>CREATE EMPLOYEE</Link> */}
                     
                 </div>
