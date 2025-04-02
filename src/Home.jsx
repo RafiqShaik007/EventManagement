@@ -19,9 +19,9 @@ const Home = ()=>{
            <nav>
                 <div><Link to='/home/'>CODIFY</Link></div>
                 <div>
-                    <Link to="/home/friends">FRIENDS</Link>
-                    <Link to="/home/messages">MESSAGES</Link>
-                    <Link to="/register" onClick={()=>{document.cookie = 'cond=false'}}>CREATE EMPLOYEE</Link>
+                    <Link to="/home/addEvent">ADD EVENT</Link>
+                    {/* <Link to="/home/messages">MESSAGES</Link> */}
+                    {/* <Link to="/register" onClick={()=>{document.cookie = 'cond=false'}}>CREATE EMPLOYEE</Link> */}
                     
                 </div>
                 <div>
