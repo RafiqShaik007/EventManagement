@@ -7,13 +7,13 @@ import {useNavigate} from 'react-router-dom'
 const Login = ()=>{
     
 
-    let [name, setName] = useState()
+    let [email, setEmail] = useState()
     let [password, setPassword] = useState()
 
     let navigate = useNavigate()
 
-    let nameData = (a)=>{
-        setName(a.target.value)
+    let emailData = (a)=>{
+        setEmail(a.target.value)
     }
     let passwordData = (b)=>{
         setPassword(b.target.value)
@@ -22,7 +22,7 @@ const Login = ()=>{
     let print =(e)=>{
         e.preventDefault()
         // console.log(name, password)
-        axios.post('http://localhost:5000/login', {name, password})
+        axios.post('http://localhost:8080/api/user/login', {email, password})
         .then((res)=>{
             console.log(res)
             alert(res.data.message)
@@ -30,7 +30,7 @@ const Login = ()=>{
                 document.cookie = 'cond=true'
                 navigate('/home')
             }
-            else if(res.data.status === 'Not Exist'){
+            else if(res.data.status === false){
                 navigate('/register')
             }
         })
@@ -43,7 +43,7 @@ const Login = ()=>{
         <div id="login">
             <form action="">
                 <h1>LOGIN</h1>
-                <input type="text" placeholder="Name"  value={name} onChange={nameData} />
+                <input type="text" placeholder="Email"  value={email} onChange={emailData} />
                 <input type="text" placeholder="Password" value={password} onChange={passwordData} />
                 <button onClick={print}>LOGIN</button>
                 <div>Not Registered? <Link to="/register">Create an Account</Link></div>
