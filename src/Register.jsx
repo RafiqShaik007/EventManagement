@@ -38,8 +38,9 @@ const Register = ()=>{
         e.preventDefault()
         axios.post('http://localhost:8080/api/user/register', {name, email, phonenumber, password, role})
         .then((res)=>{
+            console.log('Response: ', res)
             alert(res.data.message)
-            if(res.data.stat === true){
+            if(res.data.status === true){
                 navigate('/login')
             }
         })
