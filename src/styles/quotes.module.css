@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#quotes{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(rgb(255, 255, 255),  rgb(240, 240, 240), rgb(230, 230, 230));
+}
+#quotes>h1{
+    font-size: 45px;
+    color: blueviolet;
+    /* text-shadow: 5px 5px 5px grey; */
+    background-image: linear-gradient(to left, rgb(249, 5, 249), indigo, green, blue, orange, red);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}

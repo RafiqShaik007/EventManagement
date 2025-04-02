@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#ChatBox{
+    height: 89.3vh;
+    width: 70%;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    background-image: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg');
+}
+#Empty{
+    height: 89.3vh;
+    width: 70%;
+    background-color: rgb(240,242,245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+#ChatBox>header{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(7,94,86);
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+#ChatBox>header>img{
+    height: 45px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+#ChatBox>header>#name{
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+#ChatBox>section{
+    height: 80%;
+    width: 100%;
+    overflow: auto;
+    /* background-color: white; */
+    overflow-anchor: none;
+    scroll-behavior: smooth;
+
+}
+#ChatBox>section::-webkit-scrollbar{
+  display: none;
+}
+#ChatBox>section>span{
+    color: black;
+    font-size: 20px;
+    background-color: rgb(217,253,211);
+    display: block;
+    width:max-content;
+    margin: 10px;
+    padding: 10px;
+    float: right;
+    clear:both;
+    border-radius: 5px;
+}
+#ChatBox>section>span>p{
+    font-size: 13px;
+    color: rgb(94, 93, 93);
+    float: right;
+    clear: both;
+}
+#ChatBox>form{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(215, 216, 217);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+#ChatBox>form>input{
+    height: 40px;
+    width: 90%;
+    background-color: white;
+    outline: none;
+    padding: 0px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+#ChatBox>form>button{
+    height: 38px;
+    width: 60px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
