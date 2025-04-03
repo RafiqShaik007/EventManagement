@@ -26,7 +26,9 @@ const Login = () => {
         console.log(res);
         alert(res.data.message);
         if (res.data.status === true) {
-          document.cookie = "cond=true";
+          localStorage.setItem('Login_user', res.data.data.email)
+          localStorage.setItem('Login_user_name', res.data.data.name)
+          localStorage.setItem('Login_role', res.data.data.role)
           navigate("/home");
         } else if (res.data.status === false) {
           navigate("/register");

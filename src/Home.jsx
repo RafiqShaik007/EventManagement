@@ -7,6 +7,13 @@ import "./home.css"
 const Home = () => {
   let navigate = useNavigate();
 
+  let user_email = localStorage.getItem('Login_user')
+  let user_name = localStorage.getItem('Login_user_name')
+  let user_role = localStorage.getItem('Login_role')
+
+
+  console.log('localstorage data: ', localStorage.getItem('Login_user'))
+
   let logout = () => {
     document.cookie = "cond=false";
     navigate("/login");
@@ -95,8 +102,8 @@ const Home = () => {
                         <div className="avatar-glow"></div>
                     </div>
                     <div className="user-info">
-                        <span className="username">{/* Dynamic username */}</span>
-                        <span className="user-role">{/* Dynamic role */}</span>
+                        <span className="username">{ user_name}</span>
+                        <span className="user-role">{ user_role}</span>
                     </div>
                 </div>
                 

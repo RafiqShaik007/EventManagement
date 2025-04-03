@@ -170,10 +170,13 @@
     filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
 }
 .user-section {
+    width: 500px;
     position: relative;
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    border: 2px solid red;
+    width: max-content;
 }
 
 .profile-wrapper {
@@ -260,11 +263,19 @@
     transform: scale(1.1);
 }
 
+
+
 .user-info {
     display: flex;
     flex-direction: column;
+    border: 2px solid blue;
+    min-width: max-content;
 }
 
+.profile-card{
+    border: 2px solid blue;
+    width: max-content;
+}
 .username {
     color: white;
     font-weight: 600;
