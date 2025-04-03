@@ -1,23 +1,42 @@
-import welcome from './styles/welcome.module.css'
-import {useNavigate} from 'react-router-dom'
-
-const Welcome = ()=>{
-    document.cookie = 'cond=false'
-    let navigate = useNavigate()
-
-    let a =  ()=>{
-        setTimeout(async ()=>{
-           navigate('/login')
-        }, 5000);
-    }
-    a()
+import { useNavigate, Link } from "react-router-dom";
+import "./styles/welcome.css";
 
 
-    return(
-        <div id={welcome.wlc}>
-            <h1>Welcome to our website</h1>
+const Welcome = () => {
+  return (
+    <div id="event_welcome">
+      <div className="wlc-container">
+        <div className="glass-card">
+          <h1>Event Horizon</h1>
+          <p className="subtitle">Crafting Unforgettable Experiences</p>
 
+          <div className="events-grid">
+            <div className="event-card">
+              <h3 style={{ color: "white" }}>Corporate Events</h3>
+              <p style={{ color: "rgba(255,255,255,0.7)", marginTop: "1rem" }}>
+                Professional & impactful business gatherings
+              </p>
+            </div>
+
+            <div className="event-card">
+              <h3 style={{ color: "white" }}>Wedding Planning</h3>
+              <p style={{ color: "rgba(255,255,255,0.7)", marginTop: "1rem" }}>
+                Creating your perfect day
+              </p>
+            </div>
+
+            <div className="event-card">
+              <h3 style={{ color: "white" }}>Conferences</h3>
+              <p style={{ color: "rgba(255,255,255,0.7)", marginTop: "1rem" }}>
+                Knowledge-sharing at its best
+              </p>
+            </div>
+          </div>
+
+          <Link to='/login'><button className="cta-button">Explore Events</button></Link>
         </div>
-    )
-}
-export default Welcome
+      </div>
+    </div>
+  );
+};
+export default Welcome;

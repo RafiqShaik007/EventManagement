@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#event-login {
+    min-height: 100vh;
+    /* background: linear-gradient(45deg, #0a0a0a, #3a4452); */
+    /* background: url('https://images.unsplash.com/photo-1469371670807-013ccf25f16a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXZlbnQlMjBwbGFubmluZ3xlbnwwfHwwfHx8MA%3D%3D') center/cover fixed; */
+    background-image: url('https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXZlbnQlMjBwbGFubmluZ3xlbnwwfHwwfHx8MA%3D%3D');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    animation: gradient 15s ease infinite;
+    /* border: 2px solid red; */
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#event-login .container {
+    position: relative;
+    width: 380px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transform: scale(1);
+    animation: containerEntry 1s ease-out;
+    border: 2px solid white;
+}
+
+@keyframes containerEntry {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#event-login .form-box {
+    padding: 40px;
+    width: 100%;
+}
+
+#event-login .form-box h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+#event-login .input-box {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+    transition: 0.3s;
+}
+
+#event-login .input-box:hover {
+    border-bottom-color: #00ff88;
+}
+
+#event-login .input-box label {
+    position: absolute;
+    /* top: 50%; */
+    top: -5px;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    pointer-events: none;
+    transition: 0.3s;
+   
+
+}
+
+/* #event-login .input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+    color: #00ff88;
+    font-size: 0.8em;
+} */
+
+#event-login .input-box input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+
+/* .input-box i {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+    transition: 0.3s;
+} */
+
+#event-login .input-box:hover i {
+    color: #00ff88;
+}
+
+#event-login .btn {
+    width: 100%;
+    height: 45px;
+    background: #00ff88;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #222;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#event-login .btn:hover {
+    background: #00cc6a;
+    transform: scale(1.02);
+}
+
+#event-login .register {
+    text-align: center;
+    margin-top: 25px;
+    color: #fff;
+}
+
+#event-login .register a {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#event-login .register a:hover {
+    text-decoration: underline;
+}

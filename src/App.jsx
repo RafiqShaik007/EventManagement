@@ -4,11 +4,10 @@ import Register from "./Register";
 import Welcome from "./Welcome";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Edit from "./Edit";
-import Friends from "./Friends";
-import Messages from "./Messages";
-import Quotes from "./Quotes";
+
+
 import ProtectRoutes from "./ProtectRoutes";
-import ChatBox from "./ChatBox";
+
 
 import Home from "./Home";
 import Login from "./Login";
@@ -43,11 +42,10 @@ const App = () => {
           <Route path="/register" element={<Register />} />
 
           <Route element={<ProtectRoutes />}>
-            <Route path="/home/" element={<Quotes />} />
+            
             <Route path="/home/addEvent" element={<AddEvent/>} />
             <Route path="/home/allEvents" element={<Events/>}>
-              {/* <Route path="/home/messages/" element={<ChatBox />} />
-              <Route path="/home/messages/:name" element={<ChatBox />} /> */}
+              
             </Route>
           </Route>
 
