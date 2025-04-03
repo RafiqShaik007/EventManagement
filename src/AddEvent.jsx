@@ -296,7 +296,7 @@ const AddEvent = () => {
             <span className="particle-wave"></span>
           </button>
 
-          <Link to="/login" className="wormhole-link">
+          <Link to="/home" className="wormhole-link">
             Cancel Creation
           </Link>
         </div>
