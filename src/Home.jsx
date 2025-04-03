@@ -17,7 +17,7 @@ const Home = ()=>{
         <div id={style.home}>
             
            <nav>
-                <div><Link to='/home/'>CODIFY</Link></div>
+                <div><Link to='/home/'>EVENT HORIZON</Link></div>
                 <div>
                     <Link to="/home/addEvent">ADD EVENT</Link>
                     <Link to="/home/allEvents">DISPLAY ALL EVENTS</Link>

@@ -1,0 +1,193 @@
+#register {
+    /* border: 2px solid red; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+#register .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(45deg, #2a2a72, #009ffd); */
+    background: url('https://png.pngtree.com/background/20250102/original/pngtree-new-event-management-outdoor-image-picture-image_15562725.jpg') center/cover fixed;
+    padding: 20px;
+  }
+  
+  #register  .glass-form {
+    max-height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    animation: formEntrance 0.8s ease-out;
+    /* border: 2px solid black; */
+  }
+  
+  @keyframes formEntrance {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #register   .form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  #register   .form-header h1 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+  
+  #register   .animated-border {
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto;
+    animation: borderScale 2s infinite;
+  }
+  
+  @keyframes borderScale {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(1.5); }
+  }
+  
+  #register   .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  #register   .input-group input, .role-select {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  #register  .input-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  #register  .input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  #register   .input-group input:focus ~ .input-highlight,
+  .input-group input:valid ~ .input-highlight {
+    width: 100%;
+    border: none;
+    outline: none !important;
+  }
+  
+  #register   .input-group input:focus ~ .input-label,
+  .input-group input:valid ~ .input-label {
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #fff;
+    border: none;
+    outline: none !important;
+  }
+  
+  #register   .role-select {
+    appearance: none;
+    cursor: pointer;
+  }
+  #register .role-select option{
+    background-color: black;
+  }
+  
+  #register  .select-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  #register  .register-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  #register  .hover-effect {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 100%;
+    left: -50%;
+    top: 0;
+    transform: skewX(-15deg);
+    transition: all 0.4s ease;
+  }
+  
+  #register  .register-btn:hover .hover-effect {
+    left: 120%;
+  }
+  
+  #register  .register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  #register   .login-link {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+  }
+  
+  #register  .login-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  #register  .login-link a:hover {
+    color: #ff6b6b;
+  }
