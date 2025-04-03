@@ -1,0 +1,265 @@
+#all-events {
+    /* border: 2px solid red; */
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+#all-events .galaxy-events {
+    background: radial-gradient(circle at center, #0a0a2e, #1a1a4f);
+    min-height: 100vh;
+    padding: 2rem;
+    /* border: 2px solid red; */
+  }
+  
+  #all-events  .event-hub {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    /* border: 2px solid blue; */
+  }
+  
+  #all-events  .quantum-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardEntrance 0.8s ease-out;
+    /* border: 2px solid pink; */
+    overflow: hidden;
+  }
+  
+  @keyframes cardEntrance {
+    0% { opacity: 0; transform: translateY(50px) rotateX(90deg); }
+    100% { opacity: 1; transform: translateY(0) rotateX(0); }
+  }
+  
+  #all-events  .hologram-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    /* border: 2px solid red; */
+    overflow: hidden;
+  }
+  
+  #all-events  .event-portal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    /* border: 2px solid yellow; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;;
+  }
+  
+  #all-events  .temporal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+      rgba(0, 255, 255, 0.1),
+      rgba(255, 0, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  
+  #all-events  .cosmic-details {
+    padding: 1.5rem;
+  }
+  
+  #all-events   .stellar-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  #all-events   .nebula-title {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  #all-events   .time-anomaly {
+    color: #7df9ff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  #all-events   .blackhole-info {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  #all-events   .singularity {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  #all-events  .event-quasar {
+    display: block;
+    color: #00ffff;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  #all-events   .event-pulsar {
+    color: #fff;
+    font-size: 1.1rem;
+    display: block;
+    margin-top: 0.3rem;
+  }
+  
+  #all-events  .event-comet {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    display: block;
+  }
+  
+  #all-events .wormhole-desc {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 1.5rem 0;
+  }
+  
+  #all-events  .neutrino-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  #all-events  .supernova-btn {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+  
+  #all-events  .supernova-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    left: -100%;
+    top: 0;
+    transition: all 0.4s ease;
+    transform: skewX(-15deg);
+  }
+  
+  #all-events  .edit-nova {
+    background: linear-gradient(45deg, #00ffff, #00b4d8);
+  }
+  
+  #all-events  .delete-blackhole {
+    background: linear-gradient(45deg, #ff0066, #ff512f);
+  }
+  
+  /* Hover Effects */
+  #all-events  .quantum-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  #all-events  .quantum-card:hover .temporal-overlay {
+    opacity: 1;
+  }
+  
+  #all-events  .quantum-card:hover .event-portal {
+    transform: scale(1.05);
+  }
+  
+  #all-events  .supernova-btn:hover::after {
+    left: 100%;
+  }
+  
+  #all-events   .supernova-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .event-hub {
+      grid-template-columns: 1fr;
+    }
+    
+    .neutrino-actions {
+      flex-direction: column;
+    }
+  }
+  
+  /* Particle Animation */
+  @keyframes particleFlow {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Add 3D Effect */
+  #all-events  .quantum-card {
+    perspective: 1000px;
+  }
+  
+  #all-events  .hologram-wrapper {
+    transform-style: preserve-3d;
+  }
+
+  /* Ensure content visibility */
+.cosmic-content {
+    padding: 2rem;
+    color: white;
+  }
+  
+  .blackhole-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .singularity {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .event-quasar {
+    display: block;
+    color: #00ffff;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .event-pulsar {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  /* Fix text visibility */
+  .nebula-title, .event-pulsar, .event-comet {
+    color: #fff !important;
+  }
+  
+  /* Ensure proper spacing */
+  .stellar-header {
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Make sure elements aren't hidden */
+  .quantum-card {
+    overflow: visible !important;
+  }
