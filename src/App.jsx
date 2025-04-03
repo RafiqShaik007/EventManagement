@@ -41,10 +41,11 @@ const App = () => {
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register />} />
 
-          <Route path='/home/' element={<Home/>} />
+          <Route path='/home/' element={<Home/>} >
             
             <Route path="/home/addEvent" element={<AddEvent/>} />
             <Route path="/home/allEvents" element={<Events/>}>
+            </Route>
               
             </Route>
           

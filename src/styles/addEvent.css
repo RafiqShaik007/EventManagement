@@ -1,0 +1,317 @@
+.cosmic-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(circle at center, #1a1a4f, #0a0a2e);
+    padding: 2rem;
+    position: relative;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  
+  .galaxy-form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 900px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.1);
+    position: relative;
+    animation: formOrbit 1s ease-out;
+    /* border: 2px solid red; */
+  }
+  
+  @keyframes formOrbit {
+    0% {
+      opacity: 0;
+      transform: rotateY(90deg) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateY(0) scale(1);
+    }
+  }
+  
+  .stellar-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .neon-title {
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+  
+  .pulse-beam {
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00ffff, transparent);
+    margin: 0 auto;
+    animation: beamPulse 3s infinite;
+  }
+  
+  @keyframes beamPulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+  
+  .quantum-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .nebula-input {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .nebula-input input,
+  .nebula-input textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+  }
+  
+  .nebula-input textarea {
+    height: 120px;
+    resize: none;
+  }
+  
+  .floating-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .star-trail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    transition: all 0.4s ease;
+  }
+  
+  .nebula-input input:focus ~ .star-trail,
+  .nebula-input input:valid ~ .star-trail,
+  .nebula-input textarea:focus ~ .star-trail,
+  .nebula-input textarea:valid ~ .star-trail {
+    width: 100%;
+  }
+  
+  .nebula-input input:focus ~ .floating-label,
+  .nebula-input input:valid ~ .floating-label,
+  .nebula-input textarea:focus ~ .floating-label,
+  .nebula-input textarea:valid ~ .floating-label {
+    top: -10px;
+    left: 5px;
+    font-size: 0.8rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  
+  .image-upload {
+    height: 200px;
+    position: relative;
+  }
+  
+  .hologram-upload {
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hologram-upload:hover {
+    border-color: #00ffff;
+    background: rgba(0, 255, 255, 0.05);
+  }
+  
+  .upload-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .upload-content {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .upload-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+  }
+  
+  .image-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+  }
+  
+  .supernova-button {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border: none;
+    padding: 1.2rem 3rem;
+    color: white;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+  }
+  
+  .supernova-burst {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100px;
+    height: 100%;
+    left: -100%;
+    top: 0;
+    transform: skewX(-15deg);
+    transition: all 0.6s ease;
+  }
+  
+  .supernova-button:hover .supernova-burst {
+    left: 150%;
+  }
+  
+  .supernova-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+  }
+  
+  .wormhole-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+  }
+  
+  .wormhole-link:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+  }
+  
+  /* Particle Animation */
+  .particle-wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 20%);
+    animation: particleFlow 2s infinite linear;
+  }
+  
+  @keyframes particleFlow {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+  
+  @media (max-width: 768px) {
+    .quantum-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .galaxy-form {
+      padding: 2rem;
+    }
+  }
+
+
+  /* Hide default datetime placeholder */
+.hidden-placeholder::-webkit-datetime-edit {
+    color: transparent;
+  }
+  
+  .hidden-placeholder:valid::-webkit-datetime-edit {
+    color: #fff; /* Show text when value is selected */
+  }
+  
+  /* Modern holographic styling */
+  .hologram-input {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .time-capsule-label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .time-portal-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff);
+    transition: all 0.4s ease;
+  }
+  
+  .hidden-placeholder {
+    width: 100%;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+  }
+  
+  .hidden-placeholder:focus ~ .time-portal-border {
+    width: 100%;
+  }
+  
+  .hidden-placeholder:focus ~ .time-capsule-label,
+  .hidden-placeholder:valid ~ .time-capsule-label {
+    top: -10px;
+    left: 5px;
+    font-size: 0.8rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }

@@ -1,0 +1,171 @@
+.main-container {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #0a0a2e, #1a1a4f);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    animation: slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+.nav-brand .logo-link {
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo-gradient {
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    margin-left: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.8rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.link-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00ffff);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover .link-border {
+    width: 100%;
+}
+
+.neon-hover:hover {
+    text-shadow: 0 0 10px #00ffff,
+                 0 0 20px #00ffff,
+                 0 0 40px #00ffff;
+    transform: translateY(-2px);
+}
+
+.logout-btn {
+    background: linear-gradient(45deg, #ff0066, #ff512f);
+    border: none;
+    padding: 0.8rem 2rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.logout-overlay {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 100%;
+    left: -50%;
+    top: 0;
+    transform: skewX(-15deg);
+    transition: all 0.4s ease;
+}
+
+.logout-btn:hover .logout-overlay {
+    left: 120%;
+}
+
+.logout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 0, 102, 0.4);
+}
+
+.content-container {
+    padding: 2rem 5%;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Glass Effect Enhancements */
+.glass-navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.01));
+    z-index: -1;
+}
+
+/* Hover Animations */
+.nav-link {
+    transition-delay: 0.1s;
+}
+
+.nav-link:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .glass-navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+}
+
+/* Global Animations */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Add these for extra sparkle */
+.nav-link:hover {
+    transform: scale(1.05);
+}
+
+.logo-link:hover {
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.4));
+}

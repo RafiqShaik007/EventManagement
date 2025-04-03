@@ -38,17 +38,17 @@ const Register = ()=>{
     let print = (e)=>{
         e.preventDefault()
         console.log({name, email, password, phonenumber, role })
-        // axios.post('http://localhost:8080/api/user/register', {name, email, phonenumber, password, role})
-        // .then((res)=>{
-        //     console.log('Response: ', res)
-        //     alert(res.data.message)
-        //     if(res.data.status === true){
-        //         navigate('/login')
-        //     }
-        // })
-        // .catch(()=>{
-        //     console.log('Some Error Occured in React Register')
-        // })
+        axios.post('http://localhost:8080/api/user/register', {name, email, phonenumber, password, role})
+        .then((res)=>{
+            console.log('Response: ', res)
+            alert(res.data.message)
+            if(res.data.status === true){
+                navigate('/login')
+            }
+        })
+        .catch(()=>{
+            console.log('Some Error Occured in React Register')
+        })
     }
 
     return(
